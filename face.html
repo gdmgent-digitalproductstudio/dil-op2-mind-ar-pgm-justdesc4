@@ -17,9 +17,14 @@
 
       <a-assets>
         <a-item id="mask" src="./assets/3d-models/tiger_mask.glb"></a-item>
+        <audio
+          id="tigerSound"
+          src="./assets/audio/tiger.mp3"
+          preload="auto"
+        ></audio>
       </a-assets>
 
-      <a-entity mindar-face-target="anchorIndex: 1">
+      <a-entity id="faceTarget" mindar-face-target="anchorIndex: 1">
         <a-gltf-model
           src="#mask"
           position="0 0.25 0"
@@ -28,5 +33,33 @@
         ></a-gltf-model>
       </a-entity>
     </a-scene>
+
+    <button
+      id="roarButton"
+      style="
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1000;
+      "
+    >
+      Roar like a Tiger!
+    </button>
+
+    <button
+      id="toggleMaskButton"
+      style="
+        position: absolute;
+        top: 70px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1000;
+      "
+    >
+      Hide Mask
+    </button>
+
+    <script src="./scripts/face.js"></script>
   </body>
 </html>
