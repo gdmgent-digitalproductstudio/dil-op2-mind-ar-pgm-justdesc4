@@ -21,6 +21,10 @@
         <a-item id="jaguar" src="./assets/3d-models/jaguar.glb"></a-item>
         <a-item id="panda" src="./assets/3d-models/panda.glb"></a-item>
         <a-item id="giraffe" src="./assets/3d-models/giraffe.glb"></a-item>
+        <audio id="tigerSound" src="./assets/audio/tiger.mp3"></audio>
+        <audio id="jaguarSound" src="./assets/audio/jaguar.mp3"></audio>
+        <audio id="pandaSound" src="./assets/audio/panda.mp3"></audio>
+        <audio id="giraffeSound" src="./assets/audio/giraffe.mp3"></audio>
       </a-assets>
 
       <a-entity mindar-image-target="targetIndex: 0">
@@ -62,5 +66,23 @@
 
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
     </a-scene>
+
+    <div
+      id="ui-container"
+      style="
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1000;
+      "
+    >
+      <button id="tigerButton" style="display: none">Hear the Tiger</button>
+      <button id="jaguarButton" style="display: none">Hear the Jaguar</button>
+      <button id="pandaButton" style="display: none">Hear the Panda</button>
+      <button id="giraffeButton" style="display: none">Hear the Giraffe</button>
+    </div>
+
+    <script src="./scripts/image.js"></script>
   </body>
 </html>
