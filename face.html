@@ -1,10 +1,13 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Face tracking - Meet the Animal</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/main.css" />
     <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-face-aframe.prod.js"></script>
   </head>
-  <body>
+  <body class="ar-page">
     <a-scene
       mindar-face
       embedded
@@ -34,31 +37,20 @@
       </a-entity>
     </a-scene>
 
-    <button
-      id="roarButton"
-      style="
-        position: absolute;
-        top: 20px;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 1000;
-      "
-    >
-      Roar like a Tiger!
-    </button>
+    <div class="ar-controls">
+      <button id="roarButton" class="button button--primary button--roar">
+        <span class="button__text">Roar like a Tiger!</span>
+      </button>
 
-    <button
-      id="toggleMaskButton"
-      style="
-        position: absolute;
-        top: 70px;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 1000;
-      "
-    >
-      Hide Mask
-    </button>
+      <button
+        id="toggleMaskButton"
+        class="button button--secondary button--toggle"
+      >
+        <span class="button__text">Hide Mask</span>
+      </button>
+    </div>
+
+    <a href="index.html" class="back-link">← Back</a>
 
     <script src="./scripts/face.js"></script>
   </body>

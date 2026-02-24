@@ -6,9 +6,12 @@
     <script src="https://aframe.io/releases/1.7.1/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v7.0.0/dist/aframe-extras.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
-    <title>Meet the Animal - Image Tracking</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <title>Image tracking - Meet the Animal</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/main.css" />
   </head>
-  <body>
+  <body class="ar-page">
     <a-scene
       mindar-image="imageTargetSrc: ./assets/targets.mind; maxTrack: 1;"
       color-space="sRGB"
@@ -67,21 +70,28 @@
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
     </a-scene>
 
-    <div
-      id="ui-container"
-      style="
-        position: absolute;
-        top: 20px;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 1000;
-      "
-    >
-      <button id="tigerButton" style="display: none">Hear the Tiger</button>
-      <button id="jaguarButton" style="display: none">Hear the Jaguar</button>
-      <button id="pandaButton" style="display: none">Hear the Panda</button>
-      <button id="giraffeButton" style="display: none">Hear the Giraffe</button>
+    <div class="ar-controls ar-controls--animals">
+      <button
+        id="downloadMarkersButton"
+        class="button button--primary button--download"
+      >
+        <span class="button__text">Download - markers.zip</span>
+      </button>
+      <button id="tigerButton" class="button button--animal button--tiger">
+        <span class="button__text">Hear the Tiger</span>
+      </button>
+      <button id="jaguarButton" class="button button--animal button--jaguar">
+        <span class="button__text">Hear the Jaguar</span>
+      </button>
+      <button id="pandaButton" class="button button--animal button--panda">
+        <span class="button__text">Hear the Panda</span>
+      </button>
+      <button id="giraffeButton" class="button button--animal button--giraffe">
+        <span class="button__text">Hear the Giraffe</span>
+      </button>
     </div>
+
+    <a href="index.html" class="back-link">← Back</a>
 
     <script src="./scripts/image.js"></script>
   </body>
