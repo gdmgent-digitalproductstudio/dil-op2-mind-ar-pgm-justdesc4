@@ -14,7 +14,7 @@ Mind AR – Meet the Animal is een kleine experimentele webapplicatie waarin AR 
 
 - HTML / CSS / JavaScript
 
-- 3D-modellen (GLTF/GLB) , sketchfab
+- 3D-modellen (GLB) , sketchfab
 
 - Audiobestanden (MP3)
 
